@@ -13,10 +13,10 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import seaborn as sns
 
-consumer_key = "p4I1wgl2npsNdBDshu378Fjkd"
-consumer_secret = "ulwcITBcrpPnb9EkwTukr7ERxLStRNudValhVWC68vlT8PdgGE"
-access_token = "3194988066-pW6mxUKNgjFvR4rNzuhbONp23wPRBVxDCop1S0g"
-access_token_secret = "xR5oi8SxmOJDw0SJAL0qfBhEsCGwXZe6SAOyIca4biiyR"
+consumerKey = "p4I1wgl2npsNdBDshu378Fjkd"
+consumerSecret = "ulwcITBcrpPnb9EkwTukr7ERxLStRNudValhVWC68vlT8PdgGE"
+accessToken = "3194988066-pW6mxUKNgjFvR4rNzuhbONp23wPRBVxDCop1S0g"
+accessTokenSecret = "xR5oi8SxmOJDw0SJAL0qfBhEsCGwXZe6SAOyIca4biiyR"
 
 #Create the authentication object
 authenticate = tweepy.OAuthHandler(consumerKey, consumerSecret) 

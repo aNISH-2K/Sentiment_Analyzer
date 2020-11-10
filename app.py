@@ -29,7 +29,7 @@ api = tweepy.API(authenticate, wait_on_rate_limit = True)
 def main():
     st.title("About this tool")
     html_temp = """ 
-    <div style="background-color:darkturquoise; padding:10px">
+    <div style="background-color:#1DA1F2; padding:10px">
         <h2 style="color: white; text-align: center;">Tweet Sentimental Analyis</h2>
     </div>
     """

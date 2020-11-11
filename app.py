@@ -30,12 +30,12 @@ def main():
     st.title("About this tool")
     html_temp = """ 
     <div style="background-color:#1DA1F2; padding:10px">
-        <h2 style="color: white; text-align: center;">Tweet Sentimental Analyis</h2>
+        <h2 style="color: white; text-align: center;">Tweet Sentiment Analyis</h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
     image = Image.open('banner.jpg')
-    st.image(image, caption='Twitter sentiment analyser',use_column_width=True)
+    st.image(image, caption='Twitter Sentiment Analyser',use_column_width=True)
     st.title("Tweet Sentiment Analyzer")
     options = ["About","Tweet Analysis","Generate twitter data"]
     choice = st.sidebar.selectbox("Choose any option from below dropdown", options)
@@ -43,7 +43,7 @@ def main():
     if choice == "About":
         st.subheader("Analyze the tweets of your favourite topics and trends!!")
         st.subheader("This tool perfoms the following activities")
-        st.write("### A. Tweet Analysis:\n1. Fetch the top 5 tweets on given trend/topic. \n2. Word cloud generation. \n3. Visualize the sentiment analysis through graph")
+        st.write("### A. Tweet Analysis:\n1. Fetch the top 5 tweets on given trend|topic. \n2. Word cloud generation. \n3. Visualize the sentiment analysis through graph")
         st.write("### B. Generate tweet data:\n1. Get the most liked tweet. \n2. Get the most liked re-tweet. \n3. Display the dataframe of tweets and cleaned form")
         
     elif choice == "Tweet Analysis":
@@ -72,7 +72,7 @@ def main():
                     posts = api.search(raw_text, count=10, lang='en', exclude='retweets',tweet_mode='extended')
                     df = pd.DataFrame([tweet.full_text for tweet in posts], columns = ['Tweets'])
                     allWords = ' '.join([twts for twts in df['Tweets']])
-                    wordCloud = WordCloud(width=500, height=300, random_state=21, max_font_size=110).generate(allWords)
+                    wordCloud = WordCloud(width=600, height=400, random_state=21, max_font_size=110).generate(allWords)
                     plt.imshow(wordCloud, interpolation="bilinear")
                     plt.axis('off')
                     plt.savefig('WC.jpg')
